@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://401k.bangjang.net/sitemap.xml
+
