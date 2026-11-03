@@ -12,6 +12,9 @@
       gtag('config', 'G-ZS5PRJ8F1H');
     </script>
 
+    <!-- 구글 서치 콘솔 (Google Search Console 사이트 소유권 확인 메타태그) -->
+    <meta name="google-site-verification" content="google8dfc27124880d18e" />
+
     <!-- 브라우저 탭 아이콘 (은행/금고 모양 SVG 파비콘) -->
     <link
       rel="icon"
@@ -69,21 +72,68 @@
       content="Instant US 401(k) early withdrawal penalty and retirement tax calculator across all 50 states."
     />
 
-    <!-- 구글 구조화 데이터 (JSON-LD: 검색 결과에 금융 웹앱 정보 표시) -->
+    <!-- 구글 구조화 데이터 (JSON-LD: WebApplication + Organization 7개 네트워크 + FAQ 리치 스니펫) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "Retire401kSmart US 401(k) Early Withdrawal & Retirement Calculator",
-        "url": "https://401k.bangjang.net/",
-        "description": "Free US 401(k) early withdrawal penalty, state retirement tax, and compound growth calculator covering all 50 states and DC.",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "All",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        }
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "Retire401kSmart US 401(k) Early Withdrawal & Retirement Calculator",
+            "url": "https://401k.bangjang.net/",
+            "description": "Free US 401(k) early withdrawal penalty, state retirement tax, and compound growth calculator covering all 50 states and DC.",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "All",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "Organization",
+            "name": "US Smart Finance Network",
+            "url": "https://401k.bangjang.net/",
+            "sameAs": [
+              "https://mortgage.bangjang.net",
+              "https://paycheck.bangjang.net",
+              "https://autoloan.bangjang.net",
+              "https://1099tax.bangjang.net",
+              "https://401k.bangjang.net",
+              "https://heloc.bangjang.net",
+              "https://rentalroi.bangjang.net"
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How much tax and penalty do I pay if I cash out my 401(k) early?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "If you withdraw money from a traditional 401(k) before age 59½ without an IRS exception, you owe a 10% early withdrawal penalty plus ordinary Federal and State income taxes. Plan administrators also withhold 20% upfront for federal taxes."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the IRS Rule of 55 for 401(k) withdrawals?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Under the IRS Rule of 55, if you leave your job in or after the calendar year you turn age 55, you can take distributions from that current employer's 401(k) plan without paying the 10% early withdrawal penalty, though ordinary income taxes still apply."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which states do not tax 401(k) retirement distributions?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "States with no state income tax (such as Texas, Florida, Nevada, Washington, Wyoming, South Dakota, Alaska, and Tennessee) plus retirement-exempt states like Pennsylvania, Illinois, Mississippi, and Iowa do not tax qualified 401(k) retirement distributions."
+                }
+              }
+            ]
+          }
+        ]
       }
     </script>
   </head>
@@ -92,4 +142,3 @@
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
